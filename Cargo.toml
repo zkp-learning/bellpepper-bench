@@ -6,17 +6,18 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bellpepper-core-btreemap = { git = "https://github.com/zkp-learning/bellpepper", rev = "22f81bb", package = "bellpepper-core" }
+bellpepper-core-hashmap = { git = "https://github.com/zkp-learning/bellpepper", branch = "hashmap", package = "bellpepper-core" }
+bellpepper-core-indexmap = { git = "https://github.com/zkp-learning/bellpepper", branch = "indexmap", package = "bellpepper-core" }
 bellpepper-core-origin = { git = "https://github.com/lurk-lab/bellpepper", rev = "7422cd4", package = "bellpepper-core" }
-bellpepper-core-modify = { git = "https://github.com/zkp-learning/bellpepper", rev = "22f81bb", package = "bellpepper-core" }
+indexmap = "2.0"
+rand = "=0.4.6"
 reservoir = "0.2"
-rand = "*"
 
 [dev-dependencies]
 blstrs = "0.7"
 criterion = "0.4"
 ff = "0.13.0"
-rand_core = "0.6"
-rand_xorshift = "0.3.0"
 
 [[bench]]
 name = "lc"
